@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "vconcat": [{"mark": {"type": "bar"}, "encoding": {"color": {"field": "country", "legend": {"title": "Country"}, "type": "nominal"}, "tooltip": [{"field": "country", "title": "Country", "type": "nominal"}, {"aggregate": "sum", "field": "championships", "title": "Total Championships", "type": "quantitative"}], "x": {"aggregate": "sum", "field": "championships", "title": "Total Championships", "type": "quantitative"}, "y": {"field": "country", "sort": "-x", "title": "Country", "type": "nominal"}}, "height": 300, "name": "view_1", "title": "Total Championships by Country", "width": 700}, {"mark": {"type": "bar"}, "encoding": {"color": {"field": "country", "legend": null, "type": "nominal"}, "tooltip": [{"field": "name", "type": "nominal"}, {"field": "country", "type": "nominal"}, {"field": "championships", "type": "quantitative"}], "x": {"field": "championships", "title": "Number of Championships", "type": "quantitative"}, "y": {"field": "name", "sort": "-x", "title": "Constructor", "type": "nominal"}}, "height": 400, "title": "Constructors and Their Championships (Click on Country Above)", "transform": [{"filter": {"param": "param_1"}}], "width": 700}], "data": {"name": "data-fcf1091f6b052bf0ab4cc50dc7f7f0cb"}, "params": [{"name": "param_1", "select": {"type": "point", "fields": ["country"], "on": "click"}, "views": ["view_1"]}], "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-fcf1091f6b052bf0ab4cc50dc7f7f0cb": [{"constructorId": 1, "constructorRef": "mclaren", "name": "McLaren", "nationality": "British", "championships": 165.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 2, "constructorRef": "bmw_sauber", "name": "BMW Sauber", "nationality": "German", "championships": 1.0, "country": "Germany", "latitude": 51.1638175, "longitude": 10.4478313}, {"constructorId": 3, "constructorRef": "williams", "name": "Williams", "nationality": "British", "championships": 114.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 4, "constructorRef": "renault", "name": "Renault", "nationality": "French", "championships": 46.0, "country": "France", "latitude": 46.603354, "longitude": 1.8883335}, {"constructorId": 6, "constructorRef": "ferrari", "name": "Ferrari", "nationality": "Italian", "championships": 234.0, "country": "Italy", "latitude": 42.6384261, "longitude": 12.674297}, {"constructorId": 9, "constructorRef": "red_bull", "name": "Red Bull", "nationality": "Austrian", "championships": 121.0, "country": "Austria", "latitude": 47.59397, "longitude": 14.12456}, {"constructorId": 22, "constructorRef": "benetton", "name": "Benetton", "nationality": "Italian", "championships": 29.0, "country": "Italy", "latitude": 42.6384261, "longitude": 12.674297}, {"constructorId": 23, "constructorRef": "brawn", "name": "Brawn", "nationality": "British", "championships": 17.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 25, "constructorRef": "tyrrell", "name": "Tyrrell", "nationality": "British", "championships": 16.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 27, "constructorRef": "ligier", "name": "Ligier", "nationality": "French", "championships": 4.0, "country": "France", "latitude": 46.603354, "longitude": 1.8883335}, {"constructorId": 32, "constructorRef": "team_lotus", "name": "Team Lotus", "nationality": "British", "championships": 44.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 34, "constructorRef": "brabham", "name": "Brabham", "nationality": "British", "championships": 6.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 37, "constructorRef": "march", "name": "March", "nationality": "British", "championships": 3.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 59, "constructorRef": "wolf", "name": "Wolf", "nationality": "Canadian", "championships": 1.0, "country": "Canada", "latitude": 61.0666922, "longitude": -107.991707}, {"constructorId": 66, "constructorRef": "brm", "name": "BRM", "nationality": "British", "championships": 14.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 87, "constructorRef": "cooper", "name": "Cooper", "nationality": "British", "championships": 4.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 118, "constructorRef": "vanwall", "name": "Vanwall", "nationality": "British", "championships": 3.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 131, "constructorRef": "mercedes", "name": "Mercedes", "nationality": "German", "championships": 145.0, "country": "Germany", "latitude": 51.1638175, "longitude": 10.4478313}, {"constructorId": 167, "constructorRef": "cooper-maserati", "name": "Cooper-Maserati", "nationality": "British", "championships": 1.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 170, "constructorRef": "cooper-climax", "name": "Cooper-Climax", "nationality": "British", "championships": 20.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 172, "constructorRef": "lotus-climax", "name": "Lotus-Climax", "nationality": "British", "championships": 23.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 180, "constructorRef": "lotus-ford", "name": "Lotus-Ford", "nationality": "British", "championships": 12.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 191, "constructorRef": "brabham-repco", "name": "Brabham-Repco", "nationality": "British", "championships": 16.0, "country": "United Kingdom", "latitude": 54.7023545, "longitude": -3.2765753}, {"constructorId": 196, "constructorRef": "matra-ford", "name": "Matra-Ford", "nationality": "French", "championships": 11.0, "country": "France", "latitude": 46.603354, "longitude": 1.8883335}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
